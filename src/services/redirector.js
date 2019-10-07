@@ -11,6 +11,19 @@ class Redirector extends BaseService {
     }
 
       get(url){
+        if(url === ''){
+          return { error : { message: 'invalid parameter.' }  };
+        }
+
+        const template = _.get(this, 'config.template', '');
+        const options = {
+        ..._.get(this, 'config.get'),
+            template
+        };
+
+        return options;
+
+
         const data = {
             endPoint: 'https://api2-staging.usautoparts.com',
             path: '/Redirector/v1.0/getRedirect',
@@ -22,12 +35,6 @@ class Redirector extends BaseService {
 
         return this._get(data);
     }
-
-    post() {
-        return { 'data' : { name : '....' }  }
-    }
-
-
 
 }
 
