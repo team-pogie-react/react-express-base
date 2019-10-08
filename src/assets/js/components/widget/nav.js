@@ -1,38 +1,37 @@
 import React from 'react'
-import { Grommet, Box, Anchor, Image, Form, TextInput, Button, Text, Select, Grid , grommet } from 'grommet'
+import { Grommet, Box, Anchor, Text, grommet } from 'grommet'
 
 const nav = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()
   return (
-<Grommet theme={grommet}>
+  <Grommet theme={grommet}>
+    <Box align="center" justify="center" pad="small" fill="horizontal" background={{"color":"neutral-3"}}>
+      <Box align="center" justify="center" pad="small" fill="horizontal" alignSelf="center" basis="xxsmall" width="xxsmall" direction="row-responsive" gap="small">
+        <Anchor href="/" color="light-1">
+          <Text margin="small">
+            NavLinks
+          </Text>
+        </Anchor>        <Anchor href="/" color="light-1">
+          <Text margin="small">
+            NavLinks
+          </Text>
+        </Anchor>        <Anchor href="/" color="light-1">
+          <Text margin="small">
+            NavLinks
+          </Text>
+        </Anchor>        <Anchor href="/" color="light-1">
+          <Text margin="small">
+            NavLinks
+          </Text>
+        </Anchor>        <Anchor href="/" color="light-1">
+          <Text margin="small">
+            NavLinks
+          </Text>
+        </Anchor>
+      </Box>
+    </Box>
 
-<Box align="center" justify="center" pad="small" fill="horizontal" background={{"color":"neutral-3"}}>
-  <Box align="center" justify="center" pad="small" fill="horizontal" alignSelf="center" basis="xxsmall" width="xxsmall" direction="row-responsive" gap="small">
-    <Anchor href="/" color="light-1">
-      <Text margin="small">
-        NavLinks
-      </Text>
-    </Anchor>        <Anchor href="/" color="light-1">
-      <Text margin="small">
-        NavLinks
-      </Text>
-    </Anchor>        <Anchor href="/" color="light-1">
-      <Text margin="small">
-        NavLinks
-      </Text>
-    </Anchor>        <Anchor href="/" color="light-1">
-      <Text margin="small">
-        NavLinks
-      </Text>
-    </Anchor>        <Anchor href="/" color="light-1">
-      <Text margin="small">
-        NavLinks
-      </Text>
-    </Anchor>
-  </Box>
-</Box>
-
-</Grommet>
+  </Grommet>
   )
 }
 
