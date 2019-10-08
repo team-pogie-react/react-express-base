@@ -21,7 +21,7 @@ function ParamsExample() {
         <Router>
             <div>
                 <Wrapper>
-                    <Title>Hello World, this is my first styled component!</Title>
+                    <Title>Hello World, this is my first styled component! Yay</Title> 
                 </Wrapper>
 
                 <Box

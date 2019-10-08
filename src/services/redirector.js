@@ -1,34 +1,30 @@
 import _ from 'lodash';
 
-import BaseService from '../services/services'
+import BaseService from './services';
 import Config from '../configs/services';
 
 class Redirector extends BaseService {
+  constructor() {
+    super();
+    this.config = _.get(Config, 'redirector', {});
+  }
 
-    constructor(){
-        super();
-        this.config = _.get(Config, 'redirector', {});
-    }
+  get(url) {
+    const data = {
+      endPoint: 'https://api2-staging.usautoparts.com',
+      path: '/Redirector/v1.0/getRedirect',
+      params: {
+        site: 'carparts.com',
+        page_url: url,
+      },
+    };
 
-      get(url){
-        const data = {
-            endPoint: 'https://api2-staging.usautoparts.com',
-            path: '/Redirector/v1.0/getRedirect',
-            params : {
-                site: 'carparts.com',
-                page_url: url
-            }
-        };
+    return this._get(data);
+  }
 
-        return this._get(data);
-    }
-
-    post() {
-        return { 'data' : { name : '....' }  }
-    }
-
-
-
+  post() {
+    return { data: { name: '....' } };
+  }
 }
 
 export default Redirector;

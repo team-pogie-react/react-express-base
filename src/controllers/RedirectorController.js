@@ -1,20 +1,16 @@
 import Redirector from '../services/redirector';
 
 class RedirectorController {
+  constructor() {
+    this.redirector = new Redirector();
+  }
 
-    constructor(){
-        this.redirector = new Redirector();
-    }
+  async searchAction(request, response) {
+    const { url } = request.query;
+    const data = await this.redirector.get(url);
 
-    async searchAction(request, response){
-
-        const url = request.query.url;
-        const data = await this.redirector.get(url);
-
-        return response.json({redirector:data});
-    }
-
-
+    return response.json({ redirector: data });
+  }
 }
 
 

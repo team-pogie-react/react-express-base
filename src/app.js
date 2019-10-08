@@ -26,7 +26,7 @@ app.use(express.static(`${__dirname}/../public`));
 app.use('/js', express.static('dist'));
 
 app.set('view engine', 'ejs');
-app.set("views","./src/views");
+app.set('views', './src/views');
 
 if (!isProduction) {
   app.use(errorhandler());
