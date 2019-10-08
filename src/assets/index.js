@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FormContainer from "./js/components/container/FormContainer.jsx";
-import SampleRouter from "./js/components/container/SampleRouter";
-import Header from "./js/components/container/Header";
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-console.log('sasasas');
+import Page from './js/components/container/Catalog';
+import reducers from './js/reducers';
+
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-    <SampleRouter />,
-    document.getElementById('route')
-);
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <Page />
+  </Provider>
+  , document.getElementById('root'));

@@ -10,6 +10,8 @@ If you dont have `npm` yet, please download and install it [here](https://nodejs
 
 After installing all necessary modules, lets run our program.
 
+`npm run webpack`
+
 `npm run dev`
 
 

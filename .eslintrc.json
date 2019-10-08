@@ -1,5 +1,11 @@
 {
-  "extends": ["airbnb-base"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base/legacy",
+    "prettier",
+    "plugin:security/recommended",
+    "plugin:react/recommended",
+    "jest-enzyme"],
   "rules": {
     "newline-before-return": ["error"],
     "no-underscore-dangle": 0,
@@ -7,5 +13,6 @@
     "linebreak-style": 0,
     "validateLineBreaks": 0,
     "import/prefer-default-export": 0
-  }
+  },
+  "parser": "babel-eslint"
 }

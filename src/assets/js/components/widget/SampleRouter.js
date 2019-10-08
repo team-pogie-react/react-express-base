@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Grommet, Box} from "grommet";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Grommet, Box } from 'grommet';
 
 import styled from 'styled-components';
 
@@ -16,12 +16,12 @@ const Wrapper = styled.section`
 `;
 
 function ParamsExample() {
-    return (
+  return (
 
         <Router>
             <div>
                 <Wrapper>
-                    <Title>Hello World, this is my first styled component! Yay</Title> 
+                    <Title>Hello World, this is my first styled component! Yay</Title>
                 </Wrapper>
 
                 <Box
@@ -62,23 +62,23 @@ function ParamsExample() {
                 />
             </div>
         </Router>
-    );
+  );
 }
 
 function Child({ match }) {
-    return (
+  return (
         <div>
             <h3>ID: {match.params.id}</h3>
         </div>
-    );
+  );
 }
 
 function ComponentWithRegex({ match }) {
-    return (
+  return (
         <div>
             <h3>Only asc/desc are allowed: {match.params.direction}</h3>
         </div>
-    );
+  );
 }
 
 export default ParamsExample;
