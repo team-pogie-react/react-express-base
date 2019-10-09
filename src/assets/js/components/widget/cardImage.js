@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Box, Image, Text, Anchor } from 'grommet'
 
 
+// eslint-disable-next-line react/prop-types
 export default function CardImage({card}) {
     if (!card){
         return <div>Loading...</div>
     }
+  // eslint-disable-next-line react/prop-types
   const {imageURL, url, text} = card;
   
   return (

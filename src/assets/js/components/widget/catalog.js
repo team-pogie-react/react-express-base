@@ -5,7 +5,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import CardImage from '../widget/cardImage';
 
-//todo get data from API
+// todo get data from API
 
 
   
@@ -30,13 +30,12 @@ class Catalog extends React.Component {
             _.forEach(brandsList, (key) => {
                 const newBrand = [];
                 newBrand.imageURL = "https://css.jcwstatics.com/sites/cpwhitney/design/top_selling_cat/shockabsorber.jpg"
-                newBrand.text = key['text']
-                newBrand.url = '/brands/'+key['mapping']
+                newBrand.text = key.text
+                newBrand.url = '/brands/'+key.mapping
                 newbrandsLists.push(newBrand);
             });
             const brands = newbrandsLists
             this.setState( { brands }  );
-            console.log(this.state.brands)
           })
       }
 
@@ -46,6 +45,7 @@ class Catalog extends React.Component {
                 <Box align="center" justify="center" pad="small">
                     <Grid align="center" alignContent="center" columns={{"size":"small","count":"fill"}} fill="horizontal" gap="xsmall" justify="center" margin="xsmall" rows="medium">
                     { this.state.brands.map(data => 
+                        // eslint-disable-next-line react/jsx-key
                         <CardImage card={data} />
                     )}    
                     </Grid>

@@ -19,7 +19,8 @@ export default class App extends Component {
         .then(data => this.setState({ users: data.data.data }))
         .catch(err => {
             console.log(err);
-            return null;
+            
+return null;
         });
  };
 

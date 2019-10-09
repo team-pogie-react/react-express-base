@@ -3,7 +3,8 @@ import { Grommet, Box,  Image,  Text, Select, grommet } from 'grommet'
 
 const jumbotron = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()
-  return (
+  
+return (
     <Grommet theme={grommet}>
     <Box align="center" justify="center" pad="xsmall" direction="row-responsive" gap="xsmall">
     <Box align="start" direction="row-responsive" gap="xsmall" width="medium" basis="small">
@@ -45,5 +46,6 @@ const screens = {
 export default () => {
   const [screen, setScreen] = React.useState(1)
   const Screen = screens[screen]
-  return <Screen setScreen={setScreen} />
+  
+return <Screen setScreen={setScreen} />
 }

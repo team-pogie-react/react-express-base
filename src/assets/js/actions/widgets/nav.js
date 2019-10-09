@@ -7,8 +7,8 @@ export const FETCH_NAVLIST= 'FETCH_NAVLIST';
 
 export default function fetchNav() {
     const request = axios.get(ROOT_URL);
-    console.log(request);
-    return {
+    
+return {
         type: FETCH_NAVLIST,
         payload: request
 

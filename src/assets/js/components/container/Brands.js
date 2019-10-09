@@ -5,8 +5,8 @@ import { User } from 'grommet-icons'
 
 
 
-const Brands = ({ setScreen}) => {
-  const [layer, setLayer] = React.useState()
+const Brands = () => {
+  const [] = React.useState()
 
   return (
   <Grommet theme={grommet}>
@@ -196,8 +196,11 @@ const screens = {
   4: Brands
 }
 
+// eslint-disable-next-line react/display-name
 export default () => {
   const [screen, setScreen] = React.useState(4)
+  // eslint-disable-next-line security/detect-object-injection
   const Screen = screens[screen]
+  
   return <Screen setScreen={setScreen} />
 }

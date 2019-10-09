@@ -9,6 +9,7 @@ class AddTodo extends React.Component {
 
     handleAddTodo = () => {
       // dispatches actions to add todo
+      // eslint-disable-next-line react/prop-types
       this.props.addTodo(this.state.input);
 
       // sets state back to empty string

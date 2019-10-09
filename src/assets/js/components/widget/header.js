@@ -3,7 +3,8 @@ import { Grommet, Box, Anchor, Image, Form, TextInput, Button , grommet } from '
 
 const header = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()
-  return (
+  
+return (
     <Grommet theme={grommet}>
         <Box align="center" justify="center" pad="small">
         <Box align="center" justify="start" direction="row-responsive" flex={false} gap="small" overflow="auto" pad="small" alignSelf="center" fill="horizontal" background={{"dark":false}}>
@@ -31,5 +32,6 @@ const screens = {
 export default () => {
   const [screen, setScreen] = React.useState(1)
   const Screen = screens[screen]
-  return <Screen setScreen={setScreen} />
+  
+return <Screen setScreen={setScreen} />
 }
