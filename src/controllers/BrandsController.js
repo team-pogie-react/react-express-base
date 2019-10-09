@@ -11,7 +11,7 @@ class BrandsController {
    * @returns {Object}
    */
   indexAction(request, response) {
-    return response.render('brands', {request});
+    return response.render('index', {request});
   }
 
 }

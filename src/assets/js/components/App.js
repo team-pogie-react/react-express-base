@@ -18,6 +18,7 @@ export default class App extends Component {
         .get("https://reqres.in/api/users?page=1")
         .then(data => this.setState({ users: data.data.data }))
         .catch(err => {
+            // eslint-disable-next-line no-console
             console.log(err);
             
 return null;
