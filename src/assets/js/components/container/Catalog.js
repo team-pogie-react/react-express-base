@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Header from '../widget/header';
 import Catalog from '../widget/catalog';
-import CardImage from '../widget/cardImage';
 import Footer from '../widget/footer';
 import Jumbotron from '../widget/jumbotron';
 import Nav from '../widget/nav';

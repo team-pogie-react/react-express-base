@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grommet, Box, Anchor, Image, Form, TextInput, Button, Text, Select, Grid , grommet } from 'grommet'
+import { Grommet, Box, Anchor, Image, Form, TextInput, Button , grommet } from 'grommet'
 
 const header = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()

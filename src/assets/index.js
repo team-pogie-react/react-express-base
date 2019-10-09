@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import Page from './js/components/container/Catalog';
 import reducers from './js/reducers';
 
+
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
