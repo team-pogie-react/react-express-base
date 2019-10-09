@@ -10,6 +10,7 @@ class NavigationList extends React.Component {
   state = {
     listItems: []
   }
+
   componentDidMount() {
     axios.get(`http://hydra-staging.usautoparts.com/v1.0/Catalog2/?op=getCategories&data={%22catalogType%22:%22Auto%22,%22catalogSource%22:%22Endeca%22,%22site%22:%22carparts.com%22,%22type%22:%22top%22,%22rank%22:%22msv_30%20desc%22,%22useSelectedVehicle%22:1,%22phoenix%22:1}`)
       .then(res => {
@@ -24,6 +25,7 @@ class NavigationList extends React.Component {
         
       })
   }
+  
   render() {
     return (
       <Grommet theme={grommet} onLoad={this.onLoad}>
