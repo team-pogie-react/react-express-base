@@ -1,107 +1,106 @@
-import React from 'react'
-import {  Grid, Box, Text, Paragraph, Form, TextInput, Button , grommet } from 'grommet'
+import React, { Component } from 'react';
+import {  Grid, Box, Text, Paragraph, Form, TextInput, Button,FormField } from 'grommet'
+import { storiesOf } from "@storybook/react";
 
 
 
+const FormFieldLabel = props => {
 
-
-const Screen1 = ({ setScreen}) => {
-
-  const [layer, setLayer] = React.useState()
-
+  const { required, label, ...rest } = props;
+  
   return (
+    <FormField
+      label={
+        required ? (
+          <Box direction="row">
+            <Text>{label}</Text>
+            <Text color="status-critical">*</Text>
+          </Box>
+        ) : (
+          label
+        )
+      }
+      required={required}
+      {...rest}
+    />
+  );
+};
 
-    <Grid columns={{"size":"medium","count":"fit"}}>
-      <Box align="center" justify="start" pad="small">
-        <Box align="center" justify="center" pad="small">
-          <Box align="start" justify="between" direction="column" flex={false} pad="xsmall" fill="horizontal">
-            <Text textAlign="start" size="xlarge" weight="bold">
-              Sign In
-            </Text>
-          </Box>
-          <Box align="center" justify="center" pad="xsmall" direction="row-responsive" height="xxsmall">
-            <Paragraph>
-              Sample Notification message here
-            </Paragraph>
-          </Box>
+class Account extends Component {
+
+
+  render(){
+ 
+    return (
+      <Grid columns={{"size":"medium","count":"fit"}}>
+        <Box align="center" justify="start" pad="small">
           <Box align="center" justify="center" pad="small">
-            <Form>
-              <Box align="center" justify="center" pad="small">
-                <TextInput placeholder="Username or Email" type="text" />
-              </Box>
-              <Box align="center" justify="center" pad="small">
-                <TextInput type="password" placeholder="Password" />
-              </Box>
-              <Box align="center" justify="center" pad="small">
-                <Button label="Login" type="submit" fill="horizontal" color="accent-2" gap="xsmall" margin="xsmall" primary={true} />
-              </Box>
-            </Form>
+            <Box align="start" justify="between" direction="column" flex={false} pad="xsmall" fill="horizontal">
+              <Text textAlign="start" size="xlarge" weight="bold">
+                Sign In
+              </Text>
+            </Box>
+            <Box align="center" justify="center" pad="xsmall" direction="row-responsive" height="xxsmall">
+              <Paragraph>
+                Sample Notification message here
+              </Paragraph>
+            </Box>
+            <Box align="center" justify="center" pad="small">
+              <Form onSubmit={this.submitFormHandler} >
+                <Box align="center" justify="center" pad="small">
+                  <FormFieldLabel name="login_email" label="Email:" required />
+                </Box>
+                <Box align="center" justify="center" pad="small">
+                  <FormFieldLabel name="password" label="Password:" type="password" required />
+                </Box>
+                <Box align="center" justify="center" pad="small">
+                  <Button label="Login" name="login_password" ref="login_password"  type="submit" fill="horizontal" color="accent-2" gap="small" margin="small" primary={true} />
+                </Box>
+              </Form>
+            </Box>
           </Box>
         </Box>
-      </Box>
-      <Box align="center" justify="center" pad="small">
         <Box align="center" justify="center" pad="small">
-          <Box align="start" justify="between" direction="column" flex={false} pad="xsmall" fill="horizontal">
-            <Text textAlign="start" size="xlarge" weight="bold">
-              Create an Account
-            </Text>
-          </Box>
-          <Box align="center" justify="center" pad="xsmall" direction="row-responsive" height="xxsmall">
-            <Paragraph>
-              Sample Notification message here
-            </Paragraph>
-          </Box>
           <Box align="center" justify="center" pad="small">
-            <Form>
-              <Box align="center" justify="center" pad="small" fill="horizontal" direction="column">
-                <Box align="start" justify="center" pad="small" fill="horizontal">
-                  <Text textAlign="start">
-                    First Name:
-                  </Text>
+            <Box align="start" justify="between" direction="column" flex={false} pad="xsmall" fill="horizontal">
+              <Text textAlign="start" size="xlarge" weight="bold">
+                Create an Account
+              </Text>
+            </Box>
+            <Box align="center" justify="center" pad="xsmall" direction="row-responsive" height="xxsmall">
+              <Paragraph>
+                Sample Notification message here
+              </Paragraph>
+            </Box>
+            <Box align="center" justify="center" pad="small">
+              <Form>
+                <Box align="center" justify="center" pad="small" fill="horizontal" direction="column">
+                  <FormFieldLabel name="first_name" label="First Name:" required />
                 </Box>
-                <TextInput placeholder="First Name" type="text" />
-              </Box>
-              <Box align="center" justify="center" pad="small" fill="horizontal" direction="column">
-                <Box align="start" justify="center" pad="small" fill="horizontal">
-                  <Text textAlign="start">
-                    Last Name:
-                  </Text>
+                <Box align="center" justify="center" pad="small" fill="horizontal" direction="column">
+                  
+                  <FormFieldLabel name="last_name" label="Last Name:" required />
                 </Box>
-                <TextInput placeholder="Last Name" type="text" />
-              </Box>
-              <Box align="center" justify="center" pad="small">
-                <Box align="start" justify="center" pad="small" fill="horizontal">
-                  <Text textAlign="start">
-                    Email:
-                  </Text>
+                <Box align="center" justify="center" pad="small">
+                  
+                  <FormFieldLabel name="email" label="Email Address:" required type='email' />
                 </Box>
-                <TextInput placeholder="Email" type="text" />
-              </Box>
-              <Box align="center" justify="center" pad="small">
-                <Box align="start" justify="center" pad="small" fill="horizontal">
-                  <Text textAlign="start">
-                    Password:
-                  </Text>
+                <Box align="center" justify="center" pad="small">
+                  
+                  <FormFieldLabel name="password_register" label="Password:" required type="password" />
                 </Box>
-                <TextInput type="password" placeholder="Password" />
-              </Box>
-              <Box align="center" justify="center" pad="small">
-                <Button label="Register" type="submit" fill="horizontal" color="accent-2" gap="xsmall" margin="xsmall" primary={true} />
-              </Box>
-            </Form>
+                <Box align="center" justify="center" pad="small">
+                  <Button label="Register" type="submit" fill="horizontal" color="accent-2" gap="xsmall" margin="xsmall" onClick={this.formSubmitHandler} />
+                </Box>
+              </Form>
+            </Box>
           </Box>
         </Box>
-      </Box>
-    </Grid>
-  )
+      </Grid>
+    )
+  }
 }
 
-const screens = {
-  1: Screen1
-}
+storiesOf("FormField", module).add("Required Label", () => <Account />);
 
-export default () => {
-  const [screen, setScreen] = React.useState(1)
-  const Screen = screens[screen]
-  return <Screen setScreen={setScreen} />
-}
+export default Account;
