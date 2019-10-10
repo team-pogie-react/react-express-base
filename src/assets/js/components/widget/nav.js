@@ -28,8 +28,7 @@ class NavigationList extends React.Component {
   
   render() {
     return (
-      <Grommet theme={grommet} onLoad={this.onLoad}>
-        <Box align="center" justify="center" pad="small" fill="horizontal" background={{"color":"neutral-3"}}>
+        <Box align="center" justify="center" pad="small" fill="horizontal" background={{"color":"accent-2"}}>
           <Box align="center" justify="center" pad="small" fill="horizontal" alignSelf="center" basis="xxsmall" width="xxsmall" direction="row-responsive" gap="small">
             { this.state.listItems.map(listItems => 
             <Anchor href="/" color="light-1">
@@ -40,8 +39,6 @@ class NavigationList extends React.Component {
             )}
           </Box>
         </Box>
-
-      </Grommet>
     )
   }
 

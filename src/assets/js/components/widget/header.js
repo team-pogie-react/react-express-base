@@ -1,12 +1,11 @@
 import React from 'react'
-import { Grommet, Box, Anchor, Image, Form, TextInput, Button , grommet } from 'grommet'
+import {  Box, Anchor, Image, Form, TextInput, Button } from 'grommet'
 import { User } from 'grommet-icons'
 
 const header = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()
   
 return (
-    <Grommet theme={grommet}>
         <Box align="center" justify="center" pad="small">
         <Box align="center" justify="start" direction="row-responsive" flex={false} gap="small" overflow="auto" pad="small" alignSelf="center" fill="horizontal" background={{"dark":false}}>
             <Anchor href="/" margin="xsmall">
@@ -16,19 +15,18 @@ return (
             </Anchor>
             <Box align="center" justify="end" pad="xsmall" fill="vertical" basis="xlarge" direction="row-responsive">
             <Form>
-                <TextInput type="text" size="small" plain={false} placeholder="Search" />
+                <TextInput type="text" size="small"  placeholder="Search" /> 
             </Form>
             <Button label="Go" hoverIndicator={true} reverse={false} margin="xsmall" />
 
             <Box align="center" justify="center" pad="small">
               <Anchor href="/account" margin="xsmall">
-                <User size="medium" color="accent-1" />
+                <User size="medium" color="accent-2" />
               </Anchor>
             </Box>
             </Box>
         </Box>
         </Box>
-    </Grommet>
   )
 }
 

@@ -1,11 +1,10 @@
 import React from 'react'
-import { Grommet, Box,  Image,  Text, Select, grommet } from 'grommet'
+import {  Box,  Image,  Text, Select } from 'grommet'
 
 const jumbotron = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()
   
 return (
-    <Grommet theme={grommet}>
     <Box align="center" justify="center" pad="xsmall" direction="row-responsive" gap="xsmall">
     <Box align="start" direction="row-responsive" gap="xsmall" width="medium" basis="small">
         <Box align="center" justify="center" margin="xsmall" border={{"color":"accent-1","size":"large","side":"all","style":"solid"}} round="medium">
@@ -34,8 +33,6 @@ return (
         </Box>
     </Box>
     </Box>
-
-    </Grommet>
   )
 }
 

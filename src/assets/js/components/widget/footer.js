@@ -1,11 +1,10 @@
 import React from 'react'
-import { Grommet, Box, Anchor, Text , grommet } from 'grommet'
+import {  Box, Anchor, Text } from 'grommet'
 
 const footer = () => {
   const [] = React.useState()
   
 return (
-  <Grommet theme={grommet}>
     <Box align="center" justify="center" pad="small" background={{"color":"neutral-3"}}>
       <Box align="center" justify="center" pad="small">
         <Box align="center" justify="center" pad="small" fill="horizontal" alignSelf="center" basis="xxsmall" width="xxsmall" direction="row-responsive" gap="small">
@@ -33,7 +32,6 @@ return (
         </Box>
       </Box>
     </Box>
-  </Grommet>
   )
 }
 

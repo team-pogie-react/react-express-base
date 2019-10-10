@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grommet, Grid, Box, Text, Paragraph, Form, TextInput, Button , grommet } from 'grommet'
+import {  Grid, Box, Text, Paragraph, Form, TextInput, Button , grommet } from 'grommet'
 
 
 
@@ -33,7 +33,7 @@ const Screen1 = ({ setScreen}) => {
                 <TextInput type="password" placeholder="Password" />
               </Box>
               <Box align="center" justify="center" pad="small">
-                <Button label="Login" type="submit" fill="horizontal" color="accent-1" gap="xsmall" margin="xsmall" primary={true} />
+                <Button label="Login" type="submit" fill="horizontal" color="accent-2" gap="xsmall" margin="xsmall" primary={true} />
               </Box>
             </Form>
           </Box>
@@ -86,7 +86,7 @@ const Screen1 = ({ setScreen}) => {
                 <TextInput type="password" placeholder="Password" />
               </Box>
               <Box align="center" justify="center" pad="small">
-                <Button label="Register" type="submit" fill="horizontal" color="accent-1" gap="xsmall" margin="xsmall" primary={true} />
+                <Button label="Register" type="submit" fill="horizontal" color="accent-2" gap="xsmall" margin="xsmall" primary={true} />
               </Box>
             </Form>
           </Box>

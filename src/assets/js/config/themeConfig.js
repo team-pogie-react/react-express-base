@@ -5,13 +5,9 @@
  */
 
 const themeConfig = {
-    "name": "themePoggie",
-    "rounding": 4,
-    "spacing": 24,
-    "global": {
-      "colors": {
-        "brand": "#0c4da2",
-        "accent-1": "#404b69",
+    global: {
+      colors: {
+        brand: "#0c4da2",
         "neutral-1": "#333333",
         "neutral-2": "#DDDDDD",
         "accent-2": "#0c4da2",
@@ -19,14 +15,14 @@ const themeConfig = {
         "accent-4": "#eb2040",
         "neutral-3": "#999999",
         "neutral-4": "#f9f9f9",
-        "focus": "#0c4da2"
+        focus: "#0c4da2"
       },
       "font": {
         "family": "arial,helvetica,sans-serif",
         "size": "18px",
         "height": "24px",
         "maxWidth": "432px"
-      },
+      }, 
       "control": {
         "border": {
           "radius": "4px"

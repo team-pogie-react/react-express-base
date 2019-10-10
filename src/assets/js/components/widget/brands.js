@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grommet, Grid, Box, Text, Button, Menu, Heading, Image, Paragraph , grommet } from 'grommet'
+import {  Grid, Box, Text, Button, Menu, Heading, Image, Paragraph , grommet } from 'grommet'
 import { User } from 'grommet-icons'
 
 
@@ -9,7 +9,6 @@ const Brands = () => {
   const [] = React.useState()
 
   return (
-  <Grommet theme={grommet}>
     <Grid fill="vertical" columns={[["small","medium"],["medium","flex"]]}>
       <Box justify="between" background={{"color":"light-2"}}>
         <Box align="center" justify="between" pad="small" direction="row">
@@ -188,7 +187,6 @@ const Brands = () => {
         </Box>
       </Box>
     </Grid>
-  </Grommet>
   )
 }
 

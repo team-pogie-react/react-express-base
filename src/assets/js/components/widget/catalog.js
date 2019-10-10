@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { Grommet, Box, Grid , grommet } from 'grommet'
+import {  Box, Grid  } from 'grommet'
 import axios from 'axios';
 import _ from 'lodash';
 import CardImage from '../widget/cardImage';
@@ -41,7 +41,6 @@ class Catalog extends React.Component {
 
     render() {
         return (
-            <Grommet theme={grommet}>
                 <Box align="center" justify="center" pad="small">
                     <Grid align="center" alignContent="center" columns={{"size":"small","count":"fill"}} fill="horizontal" gap="xsmall" justify="center" margin="xsmall" rows="medium">
                     { this.state.brands.map(data => 
@@ -50,7 +49,6 @@ class Catalog extends React.Component {
                     )}    
                     </Grid>
                 </Box>
-            </Grommet>
         );
     }
 }
