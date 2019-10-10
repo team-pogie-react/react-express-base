@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-
-import Catalog from './js/components/container/Catalog';
-import Brands from './js/components/container/Brands';
-import Account from './js/components/container/Account';
 import reducers from './js/reducers';
 import {
   BrowserRouter as Router,
@@ -13,6 +9,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
+
+import { Grommet } from 'grommet';
+import themeConfig from './js/config/themeConfig';
+
+import Catalog from './js/components/container/Catalog';
+import Brands from './js/components/container/Brands';
+import Account from './js/components/container/Account';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -36,6 +40,7 @@ function Register() {
 }
 
 ReactDOM.render(
+<Grommet theme={themeConfig} full>
 <Provider store={createStoreWithMiddleware(reducers)}>
   <Router>
         <Switch>
@@ -60,4 +65,5 @@ ReactDOM.render(
         </Switch>
     </Router>
 </Provider>
+</Grommet>
   , document.getElementById('root'));

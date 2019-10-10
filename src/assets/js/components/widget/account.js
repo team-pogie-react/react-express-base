@@ -8,10 +8,9 @@ import { Grommet, Grid, Box, Text, Paragraph, Form, TextInput, Button , grommet 
 const Screen1 = ({ setScreen}) => {
 
   const [layer, setLayer] = React.useState()
-  
+
   return (
 
-  <Grommet  theme={grommet}>
     <Grid columns={{"size":"medium","count":"fit"}}>
       <Box align="center" justify="start" pad="small">
         <Box align="center" justify="center" pad="small">
@@ -94,7 +93,6 @@ const Screen1 = ({ setScreen}) => {
         </Box>
       </Box>
     </Grid>
-  </Grommet>
   )
 }
 
