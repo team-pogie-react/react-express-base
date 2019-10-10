@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 
 import Catalog from './js/components/container/Catalog';
 import Brands from './js/components/container/Brands';
+import Account from './js/components/container/Account';
 import reducers from './js/reducers';
 import {
   BrowserRouter as Router,
@@ -18,14 +19,21 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 // You can think of these components as "pages"
 // in your app.
 
-function About() {
+function Login() {
   return (
     <div>
-      <h2>About</h2>
+      <h2>Login</h2>
     </div>
   );
 }
 
+function Register() {
+  return (
+    <div>
+      <h2>Register</h2>
+    </div>
+  );
+}
 
 ReactDOM.render(
 <Provider store={createStoreWithMiddleware(reducers)}>
@@ -34,8 +42,14 @@ ReactDOM.render(
           <Route exact path="/">
             <Catalog />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/account">
+            <Account />
+          </Route>
+          <Route path="/account/login">
+            <Login />
+          </Route>
+          <Route path="/account/register">
+            <Register />
           </Route>
           <Route path="/brands">
             <Brands />

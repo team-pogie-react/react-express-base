@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grommet, Box, Anchor, Image, Form, TextInput, Button , grommet } from 'grommet'
+import { User } from 'grommet-icons'
 
 const header = ({ setScreen}) => {
   const [layer, setLayer] = React.useState()
@@ -18,6 +19,12 @@ return (
                 <TextInput type="text" size="small" plain={false} placeholder="Search" />
             </Form>
             <Button label="Go" hoverIndicator={true} reverse={false} margin="xsmall" />
+
+            <Box align="center" justify="center" pad="small">
+              <Anchor href="/account" margin="xsmall">
+                <User size="medium" color="accent-1" />
+              </Anchor>
+            </Box>
             </Box>
         </Box>
         </Box>
