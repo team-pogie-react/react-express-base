@@ -27,7 +27,19 @@ const FormFieldLabel = props => {
 };
 
 class Account extends Component {
+  submitFormHandler = event => {
+    event.preventDefault();
+    //this means all forms have been validated.
 
+    //todo 
+    //do an ajax call to send the data to API
+
+    //iff success save the user session
+
+    //else show error message
+    console.dir(event.value); //will give us the name value
+  }
+  
 
   render(){
  
@@ -48,13 +60,13 @@ class Account extends Component {
             <Box align="center" justify="center" pad="small">
               <Form onSubmit={this.submitFormHandler} >
                 <Box align="center" justify="center" pad="small">
-                  <FormFieldLabel name="login_email" label="Email:" required />
+                  <FormFieldLabel name="login_email" label="Email:" required type="email" /> 
                 </Box>
                 <Box align="center" justify="center" pad="small">
                   <FormFieldLabel name="password" label="Password:" type="password" required />
                 </Box>
                 <Box align="center" justify="center" pad="small">
-                  <Button label="Login" name="login_password" ref="login_password"  type="submit" fill="horizontal" color="accent-2" gap="small" margin="small" primary={true} />
+                  <Button label="Login" name="login_submit" ref="login_submit"  type="submit" fill="horizontal" color="accent-2" gap="small" margin="small" primary={true} />
                 </Box>
               </Form>
             </Box>
